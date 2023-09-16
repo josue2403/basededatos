@@ -3,7 +3,8 @@
 set -o errexit
 
 pip install -r requirements.txt
-python superuser.py
 
 python manage.py collectstatic --no-input
+python superuser.py
+
 python manage.py migrate
